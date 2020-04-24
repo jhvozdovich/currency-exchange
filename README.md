@@ -46,6 +46,9 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **Provides a selection of different currencies to convert** | User Input:”Click-Select Currency” | Output: “Euro, British Pound, Indian Rupee, Australian Dollar, Canadian Dollar” |
 | **Returns an error if there was a problem processing the request** | User Input:”Click-Convert” | Output: “Your request could not be completed, please check your API Key. (Print full error message.)” |
 | **Returns an error if the currency input was not found** | User Input:”Click-Convert” | Output: “Your currency was not found, please check your spelling. (Print full error message.)” |
+| **Returns an error if no request was made** | User Input:”Click-Convert” | Output: “Your request was not performed, please check your API url and .env setup. (Print full error message.)” |
+| **Returns an error for invalid inputs** | User Input:”-1” | Output: “Please enter a valid positive number.” |
+
 
 #### License
 
