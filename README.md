@@ -50,6 +50,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **Returns an error if no request was made** | User Input:”Click-Convert” | Output: “Your request was not performed, please check your API url and .env setup. (Print full error message.)” |
 | **Returns an error for invalid negative inputs** | User Input:”-1” | Output: “Please enter a valid positive number.” |
 | **Returns an error for invalid non-numerical inputs** | User Input:”Eleven” | Output: “Please enter a valid positive number.” |
+| **Adds option to attempt alchemy** | User Input:”Human + Gold = Human” | Output: "HUMAN TRANSMUTATION IS FORBIDDEN!" |
 
 #### License
 
