@@ -3,7 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { ExchangeService } from "./../src/exchange";
-
+import { verifyInput } from "./../src/exchange";
 //FORM INPUT ONLY
 
 $(document).ready(function() {
@@ -12,13 +12,21 @@ $(document).ready(function() {
     const amount = $("#amount").val();
     const newCurrency = $("#new-currency").val();
 
-    (async () => {
-      let exhangeService = new ExchangeService();
-      let response = await exhangeService.getExchangeInfo();
-      convertCurrency(response);
-    })();
+    if (verifyInput(amount)) {
+      (async () => {
+        let exhangeService = new ExchangeService();
+        let response = await exhangeService.getExchangeInfo();
+        
+        convertCurrencyDisplay(response);
+      })();
+    } else {
+      $(".results").hide();
+      $("#error-type").html("<h3>INPUT ERROR</h3>");
+      $("#error-message").html(`<p>Please enter a valid positive number.</p>`);
+      $(".errors").show();
+    }
 
-    function convertCurrency(response) {
+    function convertCurrencyDisplay(response) {
       if(response.result === undefined) {
         $("#error-type").html("<h3>API ERROR</h3> <p>Sorry, your API request was not performed. Please check the url of your request.</p>");
         $("#error-message").html(`<p>${response}</p>`);
