@@ -1,4 +1,5 @@
 import { verifyInput } from  "./../src/exchange";
+import { attemptAlchemy } from  "./../src/exchange";
 
 describe ("VerifyInput", () => {
   test("should return an error if a value is negative", () => {
@@ -19,5 +20,11 @@ describe ("VerifyInput", () => {
   test("should return true if a value is a positive number", () => {
     let validInput = verifyInput(11.00);
     expect(validInput).toEqual(true);
+  });
+});
+
+describe ("AttemptAlchemy", () => {
+  test("should return an error if human transmutation is attempted", () => {
+    expect(attemptAlchemy("human", 10, 1000)).toEqual("HUMAN TRANSMUTATION IS FORBIDDEN!");
   });
 });

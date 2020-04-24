@@ -42,7 +42,7 @@ $(document).ready(function() {
         let rate = response.conversion_rates[newCurrency];
         $(".errors").hide();
         let conversion = (amount * rate).toFixed(2);
-        $("#conversion").text(conversion + " "  + newCurrency);
+        $("#conversion-results").text(amount + " " + inputCurrency + " is equivalent to " + conversion + " "  + newCurrency);
         $("#rate").text(rate);
         $(".results").show();
       } else if (response.result === "success" && !response.conversion_rates[newCurrency]) {

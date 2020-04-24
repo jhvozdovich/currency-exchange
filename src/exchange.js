@@ -22,3 +22,7 @@ export function verifyInput(amount) {
     return true;
   }
 }
+
+export function attemptAlchemy(input1, input2, outcome) {
+
+}
