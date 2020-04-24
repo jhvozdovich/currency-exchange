@@ -39,4 +39,7 @@ describe ("AttemptAlchemy", () => {
   test("if added starting values are greater than or equal to the outcome, equivalent exchange is achieved", () => {
     expect(attemptAlchemy(10, 10, 15)).toEqual("Congratulations! This is equivalent exchange!");
   });
+  test("if added starting values are less than the outcome, equivalent exchange is not achieved", () => {
+    expect(attemptAlchemy(10, 10, 100)).toEqual("Try again! This is not equivalent exchange!");
+  });
 });
