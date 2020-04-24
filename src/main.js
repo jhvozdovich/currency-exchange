@@ -20,10 +20,17 @@ $(document).ready(function() {
 
     function convertCurrency(response) {
       if (response.result === "error") {
+        $(".results").hide();
         $("#error-type").html("<h3>API ERROR</h3> <p>Sorry, your API request was not fufilled. Please check your key.</p>");
-        $("#error-message").html(`<p>Error: ${response.error}</p>`)
+        $("#error-message").html(`<p>Error: ${response.error}</p>`);
+        $(".errors").show();
       } else if (response.result === "success") {
-        return amount * response.conversion_rates[newCurrency];
+        $(".errors").hide();
+        let rate = response.conversion_rates[newCurrency]
+        let conversion = (amount * rate).toFixed(2);
+        $("#conversion").text(conversion + " "  + newCurrency);
+        $("#rate").text(rate);
+        $(".results").show();
       } else {
         return "ERROR";
       }
