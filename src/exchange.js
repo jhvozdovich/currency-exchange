@@ -24,5 +24,7 @@ export function verifyInput(amount) {
 }
 
 export function attemptAlchemy(input1, input2, outcome) {
-
+  if (input1 === "human" || input2 === "human" || outcome === "human") {
+    return "HUMAN TRANSMUTATION IS FORBIDDEN!";
+  }
 }
