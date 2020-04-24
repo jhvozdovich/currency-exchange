@@ -36,6 +36,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * JavaScript with jQuery Library
 * Webpack with Babel, ESLint, and Node Package Manager
 * ExchangeRate-API
+* Jest
 
 ### Specs
 | Spec | Input | Output |
@@ -47,8 +48,8 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **Returns an error if there was a problem processing the request** | User Input:”Click-Convert” | Output: “Your request could not be completed, please check your API Key. (Print full error message.)” |
 | **Returns an error if the currency input was not found** | User Input:”Click-Convert” | Output: “Your currency was not found, please check your spelling. (Print full error message.)” |
 | **Returns an error if no request was made** | User Input:”Click-Convert” | Output: “Your request was not performed, please check your API url and .env setup. (Print full error message.)” |
-| **Returns an error for invalid inputs** | User Input:”-1” | Output: “Please enter a valid positive number.” |
-
+| **Returns an error for invalid negative inputs** | User Input:”-1” | Output: “Please enter a valid positive number.” |
+| **Returns an error for invalid non-numerical inputs** | User Input:”Eleven” | Output: “Please enter a valid positive number.” |
 
 #### License
 
