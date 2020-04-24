@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { ExchangeService } from "./../src/exchange";
 import { verifyInput } from "./../src/exchange";
+import { attemptAlchemy } from "./../src/exchange";
 
 $(document).ready(function() {
   $("#convert").click(function(event) {
@@ -56,5 +57,19 @@ $(document).ready(function() {
         $(".errors").show();
       }
     }
+  });
+
+  $("#transmute").click(function(event) {
+    event.preventDefault();
+    const input1 = parseInt($("#input-alchemy-1").val());
+    const input2 = parseInt($("#input-alchemy-2").val());
+    const output = parseInt($("#output-alchemy").val());
+
+    let result = attemptAlchemy(input1, input2, output);
+    console.log(input1);
+    console.log(typeof(input1));
+    console.log(result);
+    $("#alchemy-conversion-results").text(result);
+    $(".alchemy-results").show();
   });
 });

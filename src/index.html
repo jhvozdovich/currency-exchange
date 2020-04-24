@@ -141,61 +141,59 @@
             </div>
           </div>
           <div class="col-md-6">
-            <h3>Alchemical Exchange</h3>
-            <label for="input-alchemy-1">Combine</label>
-            <select id="input-alchemy-1">
-              <option value=1>Dirt</option>
-              <option value=2>Wood</option>
-              <option value=3>Rubber</option>
-              <option value=5>Glass</option>
-              <option value=5>Ceramics</option>
-              <option value=20>Composite Metals</option>
-              <option value=25>Zinc</option>
-              <option value=30>Magnesium</option>
-              <option value=30>Copper</option>
-              <option value=50>Steel</option>
-              <option value="human">Human</option>
-              <option value="gold">Gold</option>
-            </select>
-            <label for="input-alchemy-2">and</label>
-            <select id="input-alchemy-2">
-              <option value=1>Dirt</option>
-              <option value=2>Wood</option>
-              <option value=3>Rubber</option>
-              <option value=5>Glass</option>
-              <option value=5>Ceramics</option>
-              <option value=20>Composite Metals</option>
-              <option value=25>Zinc</option>
-              <option value=30>Magnesium</option>
-              <option value=30>Copper</option>
-              <option value=50>Steel</option>
-              <option value="human">Human</option>
-              <option value="gold">Gold</option>
-            </select>
-            <hr>
-            <label for="output-alchemy">To Form:</label>
-            <select id="output-alchemy">
-              <option value=1>Dirt</option>
-              <option value=2>Wood</option>
-              <option value=3>Rubber</option>
-              <option value=5>Glass</option>
-              <option value=5>Ceramics</option>
-              <option value=20>Composite Metals</option>
-              <option value=25>Zinc</option>
-              <option value=30>Magnesium</option>
-              <option value=30>Copper</option>
-              <option value=50>Steel</option>
-              <option value="human">Human</option>
-              <option value="gold">Gold</option>
-            </select>
+            <form>
+              <h3>Alchemical Exchange</h3>
+              <label for="input-alchemy-1">Combine</label>
+              <select id="input-alchemy-1">
+                <option value=1>Dirt</option>
+                <option value=2>Wood</option>
+                <option value=3>Rubber</option>
+                <option value=5>Glass</option>
+                <option value=5>Ceramics</option>
+                <option value=20>Composite Metals</option>
+                <option value=25>Zinc</option>
+                <option value=30>Magnesium</option>
+                <option value=30>Copper</option>
+                <option value=50>Steel</option>
+                <option value=1101000>Human</option>
+                <option value=1100111>Gold</option>
+              </select>
+              <label for="input-alchemy-2">and</label>
+              <select id="input-alchemy-2">
+                <option value=1>Dirt</option>
+                <option value=2>Wood</option>
+                <option value=3>Rubber</option>
+                <option value=5>Glass</option>
+                <option value=5>Ceramics</option>
+                <option value=20>Composite Metals</option>
+                <option value=25>Zinc</option>
+                <option value=30>Magnesium</option>
+                <option value=30>Copper</option>
+                <option value=50>Steel</option>
+                <option value=1101000>Human</option>
+                <option value=1100111>Gold</option>
+              </select>
+              <hr>
+              <label for="output-alchemy">To Form:</label>
+              <select id="output-alchemy">
+                <option value=1>Dirt</option>
+                <option value=2>Wood</option>
+                <option value=3>Rubber</option>
+                <option value=5>Glass</option>
+                <option value=5>Ceramics</option>
+                <option value=20>Composite Metals</option>
+                <option value=25>Zinc</option>
+                <option value=30>Magnesium</option>
+                <option value=30>Copper</option>
+                <option value=50>Steel</option>
+                <option value=1101000>Human</option>
+                <option value=1100111>Gold</option>
+              </select>
+              <button id="transmute">Transmute!</button>
+            </form>  
             <div class="alchemy-results">
               <hr>
-              <h3><span id="alchemy-conversion-results"></span></h3>
-            </div>
-            <div class="alchemy-errors">
-              <hr>
-              <div id="alchemy-error-type"></div>
-              <div id="alchemy-error-message"></div>
+              <h5><span id="alchemy-conversion-results"></span></h5>
             </div>
           </div>
         </row>  
