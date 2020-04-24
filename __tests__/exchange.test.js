@@ -33,4 +33,7 @@ describe ("AttemptAlchemy", () => {
   test("should return an error if gold is used as a starting material to not make gold", () => {
     expect(attemptAlchemy("gold", 10, 15)).toEqual("Why are you wasting perfectly good gold??");
   });
+  test("should return an error if gold is used as a starting material to make gold", () => {
+    expect(attemptAlchemy("gold", 10,"gold")).toEqual("You know this doesn't actually make more gold right? You just got stuff all over it.");
+  });
 });
