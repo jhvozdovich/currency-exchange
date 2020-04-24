@@ -36,4 +36,7 @@ describe ("AttemptAlchemy", () => {
   test("should return an error if gold is used as a starting material to make gold", () => {
     expect(attemptAlchemy("gold", 10,"gold")).toEqual("You know this doesn't actually make more gold right? You just got stuff all over it.");
   });
+  test("if added starting values are greater than or equal to the outcome, equivalent exchange is achieved", () => {
+    expect(attemptAlchemy(10, 10, 15)).toEqual("Congratulations! This is equivalent exchange!");
+  });
 });
