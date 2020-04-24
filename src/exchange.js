@@ -16,9 +16,9 @@ export class ExchangeService {
 }
 
 export function verifyInput(amount) {
-  // if(isNaN(amount) || amount <= 0) {
-  //   return false;
-  // }  else {
-  //   return true;
-  // }
+  if(isNaN(amount) || amount <= 0) {
+    return false;
+  }  else {
+    return true;
+  }
 }
