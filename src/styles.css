@@ -1,7 +1,11 @@
-.results {
+body {
+  margin: 5%;
+  text-align: center;
+}
+.results, .alchemy-results {
   display: none;
 }
 
-.errors {
+.errors, .alchemy-errors {
   display: none;
 }

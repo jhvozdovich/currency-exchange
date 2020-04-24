@@ -1,137 +1,204 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Currency Exchange</title>
+    <title>Equivalent Exchange</title>
   </head>
   <body>
     <div class="jumbotron">
-      <h1>Find up to date exhange information for USD!</h1>
+      <h1>Equivalent Exchange</h1>
+      <h5>Providing answers for the world's monetary and alchemical transmutation queries since 3000BC</h5>
     </div>
       <div class="container">
-        <form>
-          <label for="amount">Amount to convert:</label>
-          <input id="amount" type="number" class="form-control" step="0.01" min="0.01" required>
-          
-          <label for="input-currency">Convert from:</label>
-          <select id="input-currency">
-            <option value="USD">US Dollar</option>
-            <option value="AED">United Arab Emirates Dirham </option>
-            <option value="ARS">Argentine Peso </option>
-            <option value="AUD">Australian Dollar</option>
-            <option value="BGN">Bulgarian Lev </option>
-            <option value="BRL">Brazilian Real</option>
-            <option value="BSD">Bahamian Dollar</option>
-            <option value="CAD">Canadian Dollar</option>
-            <option value="CHF">Swiss Franc</option>
-            <option value="CLP">Chilean Peso</option>
-            <option value="CNY">Chinese Yuan</option>
-            <option value="COP">Colombian Peso</option>
-            <option value="CZK">Czech Koruna</option>
-            <option value="DKK">Danish Krone</option>
-            <option value="DOP">Dominican Peso</option>
-            <option value="EGP">Egyptian Pound </option>
-            <option value="EUR">Euro</option>
-            <option value="FJD">Fijian Dollar</option>
-            <option value="GBP">British Pound</option>
-            <option value="GTQ">Guatemalan Quetzal</option>
-            <option value="HKD">Hong Kong Dollar</option>
-            <option value="HRK">Croatian Kuna</option>
-            <option value="HUF">Hungarian Forint</option>
-            <option value="IDR">Indonesian Rupiah</option>
-            <option value="ILS">Israeli New Shekel</option>
-            <option value="INR">Indian Rupee</option>
-            <option value="ISK">Icelandic Króna</option>
-            <option value="JPY">Japanese Yen</option>
-            <option value="KRW">South Korean Won</option>
-            <option value="KZT">Kazakhstani Tenge</option>
-            <option value="MXN">Mexican Peso</option>
-            <option value="MYR">Malaysian Ringgit</option>
-            <option value="NOK">Norwegian Krone</option>
-            <option value="NZD">New Zealand Dollar</option>
-            <option value="PAB">Panamanian Balboa</option>
-            <option value="PEN">Peruvian Sol</option>
-            <option value="PHP">Philippine Peso</option>
-            <option value="PKR">Pakistani Rupee</option>
-            <option value="PLN">Poland Złoty</option>
-            <option value="PYG">Paraguayan Guarani</option>
-            <option value="RON">Romanian Leu</option>
-            <option value="RUB">Russian Ruble</option>
-            <option value="SAR">Saudi Riyal</option>
-            <option value="SEK">Swedish Krona</option>
-            <option value="SGD">Singapore Dollar</option>
-            <option value="THB">Thai Baht</option>
-            <option value="TRY">Turkish Lira</option>
-            <option value="TWD">Taiwan New Dollar</option>
-            <option value="UAH">Ukrainian Hryvnia</option>
-            <option value="UYU">Uruguayan Peso</option>
-            <option value="ZAR">South African Rand</option>
-          </select>
-
-          <label for="new-currency">Convert to:</label>
-          <select id="new-currency">
-            <option value="USD">US Dollar</option>
-            <option value="AED">United Arab Emirates Dirham </option>
-            <option value="ARS">Argentine Peso </option>
-            <option value="AUD">Australian Dollar</option>
-            <option value="BGN">Bulgarian Lev </option>
-            <option value="BRL">Brazilian Real</option>
-            <option value="BSD">Bahamian Dollar</option>
-            <option value="CAD">Canadian Dollar</option>
-            <option value="CHF">Swiss Franc</option>
-            <option value="CLP">Chilean Peso</option>
-            <option value="CNY">Chinese Yuan</option>
-            <option value="COP">Colombian Peso</option>
-            <option value="CZK">Czech Koruna</option>
-            <option value="DKK">Danish Krone</option>
-            <option value="DOP">Dominican Peso</option>
-            <option value="EGP">Egyptian Pound </option>
-            <option value="EUR">Euro</option>
-            <option value="FJD">Fijian Dollar</option>
-            <option value="GBP">British Pound</option>
-            <option value="GTQ">Guatemalan Quetzal</option>
-            <option value="HKD">Hong Kong Dollar</option>
-            <option value="HRK">Croatian Kuna</option>
-            <option value="HUF">Hungarian Forint</option>
-            <option value="IDR">Indonesian Rupiah</option>
-            <option value="ILS">Israeli New Shekel</option>
-            <option value="INR">Indian Rupee</option>
-            <option value="ISK">Icelandic Króna</option>
-            <option value="JPY">Japanese Yen</option>
-            <option value="KRW">South Korean Won</option>
-            <option value="KZT">Kazakhstani Tenge</option>
-            <option value="MXN">Mexican Peso</option>
-            <option value="MYR">Malaysian Ringgit</option>
-            <option value="NOK">Norwegian Krone</option>
-            <option value="NZD">New Zealand Dollar</option>
-            <option value="PAB">Panamanian Balboa</option>
-            <option value="PEN">Peruvian Sol</option>
-            <option value="PHP">Philippine Peso</option>
-            <option value="PKR">Pakistani Rupee</option>
-            <option value="PLN">Poland Złoty</option>
-            <option value="PYG">Paraguayan Guarani</option>
-            <option value="RON">Romanian Leu</option>
-            <option value="RUB">Russian Ruble</option>
-            <option value="SAR">Saudi Riyal</option>
-            <option value="SEK">Swedish Krona</option>
-            <option value="SGD">Singapore Dollar</option>
-            <option value="THB">Thai Baht</option>
-            <option value="TRY">Turkish Lira</option>
-            <option value="TWD">Taiwan New Dollar</option>
-            <option value="UAH">Ukrainian Hryvnia</option>
-            <option value="UYU">Uruguayan Peso</option>
-            <option value="ZAR">South African Rand</option>
-          </select>
-          <button id="convert">Convert!</button>
-        </form>
-        <div class="results">
-          <h3>Here are your results!</h3>
-          <h5>Total: <span id="conversion"></span></h5>
-          <h5>Exchange Rate: <span id="rate"></span></h5>
-        </div>
-        <div class="errors">
-          <div id="error-type"></div>
-          <div id="error-message"></div>
-        </div>
+        <row>
+          <div class="col-md-6">
+            <form>
+              <h3>Currency Exchange</h3>
+              <label for="amount">Amount to convert:</label>
+              <input id="amount" type="number" step="0.01" min="0.01">
+              <hr>
+              <label for="input-currency">Convert from:</label>
+              <select id="input-currency">
+                <option value="USD">US Dollar</option>
+                <option value="AED">United Arab Emirates Dirham </option>
+                <option value="ARS">Argentine Peso </option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="BGN">Bulgarian Lev </option>
+                <option value="BRL">Brazilian Real</option>
+                <option value="BSD">Bahamian Dollar</option>
+                <option value="CAD">Canadian Dollar</option>
+                <option value="CHF">Swiss Franc</option>
+                <option value="CLP">Chilean Peso</option>
+                <option value="CNY">Chinese Yuan</option>
+                <option value="COP">Colombian Peso</option>
+                <option value="CZK">Czech Koruna</option>
+                <option value="DKK">Danish Krone</option>
+                <option value="DOP">Dominican Peso</option>
+                <option value="EGP">Egyptian Pound </option>
+                <option value="EUR">Euro</option>
+                <option value="FJD">Fijian Dollar</option>
+                <option value="GBP">British Pound</option>
+                <option value="GTQ">Guatemalan Quetzal</option>
+                <option value="HKD">Hong Kong Dollar</option>
+                <option value="HRK">Croatian Kuna</option>
+                <option value="HUF">Hungarian Forint</option>
+                <option value="IDR">Indonesian Rupiah</option>
+                <option value="ILS">Israeli New Shekel</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="ISK">Icelandic Króna</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="KRW">South Korean Won</option>
+                <option value="KZT">Kazakhstani Tenge</option>
+                <option value="MXN">Mexican Peso</option>
+                <option value="MYR">Malaysian Ringgit</option>
+                <option value="NOK">Norwegian Krone</option>
+                <option value="NZD">New Zealand Dollar</option>
+                <option value="PAB">Panamanian Balboa</option>
+                <option value="PEN">Peruvian Sol</option>
+                <option value="PHP">Philippine Peso</option>
+                <option value="PKR">Pakistani Rupee</option>
+                <option value="PLN">Poland Złoty</option>
+                <option value="PYG">Paraguayan Guarani</option>
+                <option value="RON">Romanian Leu</option>
+                <option value="RUB">Russian Ruble</option>
+                <option value="SAR">Saudi Riyal</option>
+                <option value="SEK">Swedish Krona</option>
+                <option value="SGD">Singapore Dollar</option>
+                <option value="THB">Thai Baht</option>
+                <option value="TRY">Turkish Lira</option>
+                <option value="TWD">Taiwan New Dollar</option>
+                <option value="UAH">Ukrainian Hryvnia</option>
+                <option value="UYU">Uruguayan Peso</option>
+                <option value="ZAR">South African Rand</option>
+              </select>
+              <br>
+              <label for="new-currency">Convert to:</label>
+              <select id="new-currency">
+                <option value="USD">US Dollar</option>
+                <option value="AED">United Arab Emirates Dirham </option>
+                <option value="ARS">Argentine Peso </option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="BGN">Bulgarian Lev </option>
+                <option value="BRL">Brazilian Real</option>
+                <option value="BSD">Bahamian Dollar</option>
+                <option value="CAD">Canadian Dollar</option>
+                <option value="CHF">Swiss Franc</option>
+                <option value="CLP">Chilean Peso</option>
+                <option value="CNY">Chinese Yuan</option>
+                <option value="COP">Colombian Peso</option>
+                <option value="CZK">Czech Koruna</option>
+                <option value="DKK">Danish Krone</option>
+                <option value="DOP">Dominican Peso</option>
+                <option value="EGP">Egyptian Pound </option>
+                <option value="EUR">Euro</option>
+                <option value="FJD">Fijian Dollar</option>
+                <option value="GBP">British Pound</option>
+                <option value="GTQ">Guatemalan Quetzal</option>
+                <option value="HKD">Hong Kong Dollar</option>
+                <option value="HRK">Croatian Kuna</option>
+                <option value="HUF">Hungarian Forint</option>
+                <option value="IDR">Indonesian Rupiah</option>
+                <option value="ILS">Israeli New Shekel</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="ISK">Icelandic Króna</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="KRW">South Korean Won</option>
+                <option value="KZT">Kazakhstani Tenge</option>
+                <option value="MXN">Mexican Peso</option>
+                <option value="MYR">Malaysian Ringgit</option>
+                <option value="NOK">Norwegian Krone</option>
+                <option value="NZD">New Zealand Dollar</option>
+                <option value="PAB">Panamanian Balboa</option>
+                <option value="PEN">Peruvian Sol</option>
+                <option value="PHP">Philippine Peso</option>
+                <option value="PKR">Pakistani Rupee</option>
+                <option value="PLN">Poland Złoty</option>
+                <option value="PYG">Paraguayan Guarani</option>
+                <option value="RON">Romanian Leu</option>
+                <option value="RUB">Russian Ruble</option>
+                <option value="SAR">Saudi Riyal</option>
+                <option value="SEK">Swedish Krona</option>
+                <option value="SGD">Singapore Dollar</option>
+                <option value="THB">Thai Baht</option>
+                <option value="TRY">Turkish Lira</option>
+                <option value="TWD">Taiwan New Dollar</option>
+                <option value="UAH">Ukrainian Hryvnia</option>
+                <option value="UYU">Uruguayan Peso</option>
+                <option value="ZAR">South African Rand</option>
+              </select>
+              <br>
+              <button id="convert">Convert!</button>
+            </form>
+            
+            <div class="results">
+              <hr>
+              <h3><span id="conversion-results"></span></h3>
+              <h5>Exchange Rate: <span id="rate"></span></h5>
+            </div>
+            <div class="errors">
+              <hr>
+              <div id="error-type"></div>
+              <div id="error-message"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3>Alchemical Exchange</h3>
+            <label for="input-alchemy-1">Combine</label>
+            <select id="input-alchemy-1">
+              <option value=1>Dirt</option>
+              <option value=2>Wood</option>
+              <option value=3>Rubber</option>
+              <option value=5>Glass</option>
+              <option value=5>Ceramics</option>
+              <option value=20>Composite Metals</option>
+              <option value=25>Zinc</option>
+              <option value=30>Magnesium</option>
+              <option value=30>Copper</option>
+              <option value=50>Steel</option>
+              <option value="human">Human</option>
+              <option value="gold">Gold</option>
+            </select>
+            <label for="input-alchemy-2">and</label>
+            <select id="input-alchemy-2">
+              <option value=1>Dirt</option>
+              <option value=2>Wood</option>
+              <option value=3>Rubber</option>
+              <option value=5>Glass</option>
+              <option value=5>Ceramics</option>
+              <option value=20>Composite Metals</option>
+              <option value=25>Zinc</option>
+              <option value=30>Magnesium</option>
+              <option value=30>Copper</option>
+              <option value=50>Steel</option>
+              <option value="human">Human</option>
+              <option value="gold">Gold</option>
+            </select>
+            <hr>
+            <label for="output-alchemy">To Form:</label>
+            <select id="output-alchemy">
+              <option value=1>Dirt</option>
+              <option value=2>Wood</option>
+              <option value=3>Rubber</option>
+              <option value=5>Glass</option>
+              <option value=5>Ceramics</option>
+              <option value=20>Composite Metals</option>
+              <option value=25>Zinc</option>
+              <option value=30>Magnesium</option>
+              <option value=30>Copper</option>
+              <option value=50>Steel</option>
+              <option value="human">Human</option>
+              <option value="gold">Gold</option>
+            </select>
+            <div class="alchemy-results">
+              <hr>
+              <h3><span id="alchemy-conversion-results"></span></h3>
+            </div>
+            <div class="alchemy-errors">
+              <hr>
+              <div id="alchemy-error-type"></div>
+              <div id="alchemy-error-message"></div>
+            </div>
+          </div>
+        </row>  
       </div>
   </body>
 </html>
