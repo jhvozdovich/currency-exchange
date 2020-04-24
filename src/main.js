@@ -16,7 +16,6 @@ $(document).ready(function() {
       (async () => {
         let exhangeService = new ExchangeService();
         let response = await exhangeService.getExchangeInfo(inputCurrency);
-        
         convertCurrencyDisplay(response);
       })();
     } else {
@@ -26,13 +25,17 @@ $(document).ready(function() {
       $(".errors").show();
     }
 
+   
+
     function convertCurrencyDisplay(response) {
       if(response.result === undefined) {
+        $(".results").hide();
         $("#error-type").html("<h3>API ERROR</h3> <p>Sorry, your API request was not performed. Please check the url of your request.</p>");
         $("#error-message").html(`<p>${response}</p>`);
         $(".errors").show();
       } else if (response.result === "error") {
-        $("#error-type").html("<h3>API ERROR</h3> <p>Sorry, your API request was not fufilled. Please check your key.</p>");
+        $(".results").hide();
+        $("#error-type").html("<h3>API ERROR</h3> <p>Sorry, your API request was not fufilled. Please check your API key and your input currency.</p>");
         $("#error-message").html(`<p>Error: ${response.error}</p>`);
         $(".errors").show();
       } else if (response.result === "success" && response.conversion_rates[newCurrency] && response.conversion_rates[inputCurrency]) {
@@ -42,7 +45,7 @@ $(document).ready(function() {
         $("#conversion").text(conversion + " "  + newCurrency);
         $("#rate").text(rate);
         $(".results").show();
-      } else if (response.result === "success" && (!response.conversion_rates[newCurrency] || !response.conversion_rates[inputCurrency])) {
+      } else if (response.result === "success" && !response.conversion_rates[newCurrency]) {
         $(".results").hide();
         $("#error-type").html("<h3>UNIT ERROR</h3> <p>Sorry, your API request was not fufilled. Please check your currency request.</p>");
         $("#error-message").html(`<p>Error: ${response.error}</p>`);
