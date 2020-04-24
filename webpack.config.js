@@ -1,7 +1,9 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+var webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
+
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
@@ -15,14 +17,19 @@ module.exports = {
     contentBase: './dist'
   },
   plugins: [
-    new UglifyJsPlugin({ sourceMap: true }),
+    new UglifyJsPlugin({ sourceMap: true}),
     new CleanWebpackPlugin(),
+    new Dotenv(),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
+    }),
     new HtmlWebpackPlugin({
-      title: 'Exchange', 
+      title: 'Cocktails',
       template: './src/index.html',
       inject: 'body'
-    }),
-    new Dotenv()
+    })
   ],
   module: {
     rules: [
@@ -34,16 +41,36 @@ module.exports = {
         ]
       },
       {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        use: 'url-loader?limit=100000'
+      },
+      {
+        test: /\.png$/,
+        use: 'url-loader?limit=100000'
+      },
+      {
         test: /\.js$/,
-        exclude: [
-          /node_modules/,
-          /spec/
-        ],
+        exclude: /node_modules/,
         loader: "eslint-loader"
       },
-      { test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        loader: 'url-loader?limit=100000'
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/'
+            }
+          }
+        ]
+      },
+      {
+        test:/\.html$/,
+        use: [
+          'html-loader'
+        ]
       }
     ]
   }
-};
+}
