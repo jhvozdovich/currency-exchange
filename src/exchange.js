@@ -34,5 +34,7 @@ export function attemptAlchemy(input1, input2, outcome) {
     return "You know this doesn't actually make more gold right? You just got stuff all over it.";
   } else if ((input1 + input2) >= outcome) {
     return "Congratulations! This is equivalent exchange!";
+  } else if ((input1 + input2) < outcome) {
+    return "Try again! This is not equivalent exchange!";
   }
 }
