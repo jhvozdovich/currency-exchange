@@ -1,7 +1,44 @@
 body {
-  margin: 5%;
+  margin-top: 5%;
+  margin-right: 10%;
+  margin-left: 10%;
   text-align: center;
+  font-family: Trattatello, fantasy;
+  background-image: url(./assets/images/parchment.jpg);
 }
+
+label, input, select, button, p {
+  font-family: Optima, sans-serif;
+}
+
+button {
+  font-size: larger;
+  padding: 3%;
+  margin-top: 2%;
+}
+
+button:hover {
+  background-color: rgb(60, 59, 59);
+  color: rgb(196, 193, 191);
+}
+
+.jumbotron {
+  padding: 5%;
+  background-color: rgb(196, 193, 191);
+  border: 2px solid rgb(60, 59, 59);
+  border-radius: 25px;
+  opacity: 0.8;
+}
+
+.col-md-5 {
+  background-color: rgb(216, 208, 194);
+  padding: 2%;
+  margin: 2%;
+  border: 2px solid rgb(60, 59, 59);
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
 .results, .alchemy-results {
   display: none;
 }

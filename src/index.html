@@ -6,11 +6,12 @@
   <body>
     <div class="jumbotron">
       <h1>Equivalent Exchange</h1>
-      <h5>Providing answers for the world's monetary and alchemical transmutation queries since 3000BC</h5>
+      <h3>Providing answers to the world's monetary and alchemical queries since 3000BC</h3>
     </div>
       <div class="container">
         <row>
-          <div class="col-md-6">
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
             <form>
               <h3>Currency Exchange</h3>
               <label for="amount">Amount to convert:</label>
@@ -140,7 +141,7 @@
               <div id="error-message"></div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-5 alchemy-col">
             <form>
               <h3>Alchemical Exchange</h3>
               <label for="input-alchemy-1">Combine</label>
@@ -189,13 +190,15 @@
                 <option value=1101000>Human</option>
                 <option value=1100111>Gold</option>
               </select>
+              <br>
               <button id="transmute">Transmute!</button>
             </form>  
             <div class="alchemy-results">
               <hr>
-              <h5><span id="alchemy-conversion-results"></span></h5>
+              <h3><span id="alchemy-conversion-results"></span></h3>
             </div>
           </div>
+          <div class="col-md-1"></div>
         </row>  
       </div>
   </body>
