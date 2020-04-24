@@ -13,7 +13,7 @@ export class ExchangeService {
       }
       return jsonifiedResponse;
     } catch (error) {
-      return false
+      return false;
     }
   }
 }
