@@ -30,5 +30,7 @@ export function attemptAlchemy(input1, input2, outcome) {
     return "Sorry, only the rich get richer!";
   } else if ((input1 === "gold" || input2 === "gold") && outcome !== "gold") {
     return "Why are you wasting perfectly good gold??";
-  } 
+  } else if ((input1 === "gold" || input2 === "gold") && outcome === "gold") {
+    return "You know this doesn't actually make more gold right? You just got stuff all over it.";
+  }
 }
