@@ -26,5 +26,7 @@ export function verifyInput(amount) {
 export function attemptAlchemy(input1, input2, outcome) {
   if (input1 === "human" || input2 === "human" || outcome === "human") {
     return "HUMAN TRANSMUTATION IS FORBIDDEN!";
+  } else if (outcome === "gold" && !(input1 === "gold" || input2 === "gold")) {
+    return "Sorry, only the rich get richer!";
   }
 }

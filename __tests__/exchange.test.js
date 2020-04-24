@@ -28,6 +28,6 @@ describe ("AttemptAlchemy", () => {
     expect(attemptAlchemy("human", 10, 1000)).toEqual("HUMAN TRANSMUTATION IS FORBIDDEN!");
   });
   test("should return an error if gold is made without gold starting materials", () => {
-    expect(attemptAlchemy(1000, 10, "gold")).toEqual("Sorry, you can't make gold without gold!");
+    expect(attemptAlchemy(1000, 10, "gold")).toEqual("Sorry, only the rich get richer!");
   });
 });
