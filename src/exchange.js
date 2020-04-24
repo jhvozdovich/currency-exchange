@@ -3,7 +3,6 @@
 export class ExchangeService {
   async getExchangeInfo() {
     try {
-      console.log(process.env.API_KEY);
       let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/latest/USD`);
       let jsonifiedResponse;
       if (response.ok && response.status === 200) {
@@ -13,7 +12,7 @@ export class ExchangeService {
       }
       return jsonifiedResponse;
     } catch (error) {
-      return false;
+      return error;
     }
   }
 }
