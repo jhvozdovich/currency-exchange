@@ -50,7 +50,12 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **Returns an error if no request was made** | User Input:”Click-Convert” | Output: “Your request was not performed, please check your API url and .env setup. (Print full error message.)” |
 | **Returns an error for invalid negative inputs** | User Input:”-1” | Output: “Please enter a valid positive number.” |
 | **Returns an error for invalid non-numerical inputs** | User Input:”Eleven” | Output: “Please enter a valid positive number.” |
-| **Adds option to attempt alchemy** | User Input:”Human + Gold = Human” | Output: "HUMAN TRANSMUTATION IS FORBIDDEN!" |
+| **Adds option to attempt human alchemy** | User Input:”Human + Gold = Human” | Output: "HUMAN TRANSMUTATION IS FORBIDDEN!" |
+| **Adds option to attempt to make gold** | User Input:”Steel + Dirt = Gold” | Output: "Sorry you can't make gold!" |
+| **Adds option to attempt to make more gold** | User Input:”Steel + Gold = Gold” | Output: "Sorry you can't make more gold!" |
+| **Adds option to attempt to make something from gold** | User Input:”Steel + Gold = Dirt” | Output: "Why would you waste gold??" |
+| **Adds response for equivalent exchange** | User Input:”Steel + Ceramic = Dirt” | Output: "Equivalent Exchange!" |
+| **Adds response for in-equivalent exchange** | User Input:”Dirt + Dirt = Steel” | Output: "IN-Equivalent Exchange!" |
 
 #### License
 
