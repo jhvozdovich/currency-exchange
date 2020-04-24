@@ -28,5 +28,5 @@ export function attemptAlchemy(input1, input2, outcome) {
     return "HUMAN TRANSMUTATION IS FORBIDDEN!";
   } else if (outcome === "gold" && !(input1 === "gold" || input2 === "gold")) {
     return "Sorry, only the rich get richer!";
-  }
+  } 
 }
