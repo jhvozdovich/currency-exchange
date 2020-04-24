@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <script type="text/javascript" src="bundle.js"></script>
+    <title>Currency Exchange</title>
   </head>
   <body>
-
+    <h1>Find up to date exhange information for USD!</h1>
+    <form>
+      <label for="amount">Amount to convert:</label>
+      <input id="amount" type="number" step="0.01" min="0.01" required>
+      <select class="form-control" id="new-currency">
+        <option value="USD">USD</option>
+        <option value="EUR">Euro</option>
+        <option value="GBP">British Pound</option>
+        <option value="INR">Indian Rupee</option>
+        <option value="AUD">Australian Dollar</option>
+        <option value="CAD">Canadian Dollar</option>
+      </select>
+      <button id="convert">Convert!</button>
+    </form>
   </body>
 </html>
