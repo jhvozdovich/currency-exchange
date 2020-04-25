@@ -1,7 +1,5 @@
 body {
-  margin-top: 5%;
-  margin-right: 10%;
-  margin-left: 10%;
+  margin: 3%;
   text-align: center;
   font-family: Trattatello, fantasy;
   background-image: url(./assets/images/parchment.jpg);
@@ -33,7 +31,7 @@ button:hover {
 .col-md-5 {
   background-color: rgb(216, 208, 194);
   padding: 2%;
-  margin: 2%;
+  margin: 1%;
   border: 2px solid rgb(60, 59, 59);
   border-radius: 15px;
   opacity: 0.8;
